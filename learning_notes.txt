@@ -1,3 +1,10 @@
 Stemming Algrorithms 
 #Source https://www.baeldung.com/cs/stemming-vs-lemmatization
 
+1. Why we use Stemming and Lemmatization in NLP?
+Ans: Both stemming and lemmatization are word normalization techniques. 
+They are very often used when implementing search engines to handle variations of the same word properly.
+For example, if a user is searching for “dog foods”, we most likely want to retrieve results that mention the singular word “food” as well, meaning that we need to normalize the plural form of “foods” to “food”. 
+Similarly, we want to handle similar variations for verbs and adjectives. This is where stemming or lemmatization comes in handy.
+
+2. 
