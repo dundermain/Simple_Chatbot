@@ -23,7 +23,6 @@ Stemming is mostly used to index documents in a search engine, so these stems, w
 Ans: We can think of lemmatization as a more sophisticated version of stemming. 
 It reduces each word to its proper base form, that is, a word that we can find in a dictionary.
 To do this, lemmatization algorithms depend on the availability of part-of-speech information on the input words because different normalization rules might need to be applied whether the word is a noun, verb, adjective, or other.
-
-As an example, let’s consider the word “following”. According to the context, this can either be a noun (e.g., “he has a huge following”), a verb (e.g., “he started following the rabbit”) or an adjective (e.g., “the following day”). If it’s an adjective or verb, lemmatization will return “following”, while if it’s a verb it will return “follow”. A stemming algorithm won’t be aware of this, and will remove the “ing” suffix to return “follow” in all cases.
-
+As an example, let’s consider the word “following”. According to the context, this can either be a noun (e.g., “he has a huge following”), a verb (e.g., “he started following the rabbit”) or an adjective (e.g., “the following day”). 
+If it’s an adjective or verb, lemmatization will return “following”, while if it’s a verb it will return “follow”. A stemming algorithm won’t be aware of this, and will remove the “ing” suffix to return “follow” in all cases.
 Search engines can use lemmatization to index documents in a similar fashion to stemming. However, given its higher accuracy, it’s used in a variety of NLP tasks where having valid words is a must, for example, Word Sense Disambiguatio
