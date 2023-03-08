@@ -7,4 +7,12 @@ They are very often used when implementing search engines to handle variations o
 For example, if a user is searching for “dog foods”, we most likely want to retrieve results that mention the singular word “food” as well, meaning that we need to normalize the plural form of “foods” to “food”. 
 Similarly, we want to handle similar variations for verbs and adjectives. This is where stemming or lemmatization comes in handy.
 
-2. 
+2. What is Stemming?
+Ans: Stemming is a straightforward normalization technique, most often implemented as a series of rules that are progressively applied to a word to produce a normalized form.
+These rules vary from language to language, and they reflect the morphological structure of the language at hand. 
+For example, for English, a possible rule could be to remove the “s” at the end of a word to transform it into its singular form.
+One important thing to keep in mind about stemming is that it’s not required that the normalized word be valid, but only that variations of the same word map to the same stem.
+We can see this phenomenon in action by experimenting with the Porter stemmer, a widely used stemming algorithm for English. Using it on the words “engine” or “engines”, will result in “engin”. 
+Although this is not a valid English word, we only care that both words map to the same stem.
+Although it may seem counter-intuitive at first, this doesn’t represent a problem. 
+Stemming is mostly used to index documents in a search engine, so these stems, which may be non-valid words, are only processed internally to search documents and are never displayed to the user.
