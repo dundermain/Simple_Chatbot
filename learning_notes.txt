@@ -26,3 +26,13 @@ To do this, lemmatization algorithms depend on the availability of part-of-speec
 As an example, let’s consider the word “following”. According to the context, this can either be a noun (e.g., “he has a huge following”), a verb (e.g., “he started following the rabbit”) or an adjective (e.g., “the following day”). 
 If it’s an adjective or verb, lemmatization will return “following”, while if it’s a verb it will return “follow”. A stemming algorithm won’t be aware of this, and will remove the “ing” suffix to return “follow” in all cases.
 Search engines can use lemmatization to index documents in a similar fashion to stemming. However, given its higher accuracy, it’s used in a variety of NLP tasks where having valid words is a must, for example, Word Sense Disambiguatio
+
+
+4. Pros and Cons
+Whether to use stemming or lemmatization heavily depends on our specific requirements.
+In general, the advantages of stemming are that it’s straightforward to implement and fast to run. 
+The trade-off here is that the output might contain inaccuracies, although they may be irrelevant for some tasks, like text indexing.
+Instead, lemmatization provides better results by performing an analysis that depends on the word’s part-of-speech and producing real, dictionary words. 
+As a result, lemmatization is harder to implement and slower compared to stemming.
+To sum up, lemmatization is almost always a better choice from a qualitative point of view. With today’s computational resources, running lemmatization algorithms shouldn’t have a significant impact on the overall performance. 
+However, if we are heavily optimizing for speed, a simpler stemming algorithm can be a possibility.
